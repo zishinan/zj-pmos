@@ -1,4 +1,4 @@
-package com.common.jz.oa.common.exception;
+package com.zj.springboot.pmos.admin.common.exception;
 
 public class WarnningException extends LogicException{
 	private static final long serialVersionUID = 7676754986940389833L;

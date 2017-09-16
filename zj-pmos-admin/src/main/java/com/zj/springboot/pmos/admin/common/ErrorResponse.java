@@ -1,4 +1,4 @@
-package com.common.jz.oa.common;
+package com.zj.springboot.pmos.admin.common;
 
 
 public class ErrorResponse{

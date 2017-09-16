@@ -1,4 +1,4 @@
-package com.common.jz.oa.common.exception;
+package com.zj.springboot.pmos.admin.common.exception;
 
 public class LogicException extends Exception{
 	private static final long serialVersionUID = -2459296536746888047L;

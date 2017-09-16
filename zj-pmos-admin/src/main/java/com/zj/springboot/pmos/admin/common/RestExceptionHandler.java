@@ -1,4 +1,4 @@
-package com.common.jz.oa.common;
+package com.zj.springboot.pmos.admin.common;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.common.jz.oa.common.exception.LogicException;
+import com.zj.springboot.pmos.admin.common.exception.LogicException;
 
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {

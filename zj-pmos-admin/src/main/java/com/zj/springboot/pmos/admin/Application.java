@@ -1,4 +1,4 @@
-package com.common.jz.oa;
+package com.zj.springboot.pmos.admin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
