@@ -22,5 +22,6 @@
 ### oa部分
 
 ## 技术支持
+感谢以下项目的开源：
 ### 前端模板
-[charisma](https://github.com/usmanhalalit/charisma)
+[hAdmin](https://github.com/huangyaoxin/hAdmin)

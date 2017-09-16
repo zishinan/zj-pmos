@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>信息登记</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://validform.rjboy.cn/wp-content/themes/validform/js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="http://validform.rjboy.cn/Validform/v5.1/Validform_v5.1_min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#test").Validform({
+            beforeSubmit:function(curform){
+                var qq = $("#qq").val();
+                var wechart = $("#wechart").val();
+                var phone = $("#phone").val();
+                if(qq.length > 0 || wechart.length > 0 || phone.length > 0){
+                    return true;
+                }
+                $("#error").html("请填写联系方式");
+                return false;
+            }
+        });
+        $("#Validform_msg").hide();
+    })
+</script>
+<body>
+<div>
+    <div class="page-header" align="center">
+        <h1>信息登记 <small>花一分钟填写关键信息，有兼职将主动与您联系！</small></h1>
+    </div>
+    <!--<div id="alert" class="alert alert-success" role="alert">成功！</div>-->
+    <form id="test" action="/intentionWorks" method="get" class="form-horizontal">
+        <div class="form-group">
+            <label for="name" class="col-sm-4 control-label">姓名</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" name="name" id="name" placeholder="怎么称呼您" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="wokeryears" class="col-sm-4 control-label">工作经验</label>
+            <div class="col-sm-5">
+                <input type="number" class="form-control" name="wokeryears" id="wokeryears" placeholder="请输入您的工作年限">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="wokers" class="col-sm-4 control-label">擅长领域</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="wokers" name="wokers" placeholder="擅长的业务领域">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="language" class="col-sm-4 control-label">擅长语言</label>
+            <div class="col-sm-5">
+                <input type="text" class="form-control" id="language" name="language" placeholder="最常用的的语言">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-5 control-label">以下联系方式请至少填写一个：</label>
+        </div>
+        <div class="form-group">
+            <label for="contact" class="col-sm-4 control-label">联系方式</label>
+            <div class="form-inline">
+                <div id="contact">
+                    <input type="text" class="form-control" id="qq" name="qq" placeholder="请输入您的QQ号" />
+                    <span>或者</span>
+                    <input type="text" class="form-control" id="wechart" name="wechart" placeholder="请输入您的微信" />
+                    <span>或者</span>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="请输入您的手机号" />
+                    <span id="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-10">
+                <button id="sub" type="submit" class="btn btn-default">提 交</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
+
+
